@@ -2,6 +2,7 @@ import {Route, Routes} from 'react-router';
 import AddDish from './pages/add-dish/add-dish.tsx';
 import Header from './components/Header/Header.tsx';
 import Home from './pages/home/home-page.tsx'
+import Basket from './pages/basket/basket-page.tsx'
 import EditDish from './pages/edit-dish/edit-dish.tsx';
 import { IBasketState, IDish } from './types.ts';
 import { useEffect, useState } from "react";
@@ -26,7 +27,7 @@ function App() {
         <Route path="/" element={<Home addDishToBasket={handleAddDish}/>}/>
           <Route path="/add-dish" element={<AddDish/>}/>
           <Route path="/edit-dish/:id" element={<EditDish/>}/>
-          
+          <Route path="/basket/" element={<Basket/>}/>
         </Routes>
       </div>
     </>
